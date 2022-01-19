@@ -34,6 +34,14 @@ $(function () {
 
     $('li').on('click', function (e) {
         console.log(this.id, "event object is: ", e);
+        $(this).animate({
+            "opacity": 0.0,
+            "padding-left": "+=80",
+        },
+            500
+        );
     });
 
+
+    $('ul#list').css("border", "1px solid #000").hide().slideDown(2000);
 });
