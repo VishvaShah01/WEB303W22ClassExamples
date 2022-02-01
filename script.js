@@ -1,6 +1,6 @@
 $(function () {
     /******* Tried out using the .load() method *****/
-    // let loadedContent = $('#content').load('test.html #london').hide().fadeIn(2000).css("border", "1px solid #000");
+    let loadedContent = $('#content').load('test.html #london').hide().fadeIn(2000).css("border", "1px solid #000");
     // // $('#content').load('test.html #london');
     // // $('#content').hide();
     // // $('#content').fadeIn(2000);
