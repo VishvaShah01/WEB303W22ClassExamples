@@ -1,77 +1,43 @@
-$(function () {
-    /******* Tried out using the .load() method *****/
+// $(function () {
 
-    // let loadedContent = $('#content').load('test.html #london').hide().fadeIn(2000).css("border", "1px solid #000");
-    // // $('#content').load('test.html #london');
-    // // $('#content').hide();
-    // // $('#content').fadeIn(2000);
-    // // $('#content').css("border", "1px solid #000");
-    // console.log("Selecting the content element on the page: ", $("#content"));
-    // console.log("Loaded content return value: ", loadedContent);
+// });
+var a;
+var b;
+var c = { property: "Something", numbervalue: 1 };
 
-    /******* using the $.get() method with a callback *****/
+function step1() {
+    // console.log("step 1 ran");
+    return "this" + step2();
+}
+function step2() {
+    a = [1, 2, 3, 4];
+    // console.assert(a.length > 0, "array a STILL has no value");
+    b = a[100];
+    // debugger;
+    // ILLEGAL
+    // console.log("got here", b);
+    return " is less awesome";
+}
 
-    // jQuery.get()
-    // $.get("test.html", function (data) {
-    //     console.log("The data returned is: ", data);
-    //     $("#content").html(data);
-    // }, "html");
+try {
+    console.log("trying to run some code");
+    var message = step1();
+    console.log("successfully ran those functions");
+}
+catch (exception) {
+    console.error("something went wrong, info as follows: ", exception);
+}
+finally {
+    console.log("This is going to run no matter what");
+}
+// console.log("a is: ", a, " and b is: ", b, " and c is ", c, " and c if I force it to be a string is: " + c);
+console.group("examples of messages")
+console.info(message);
+console.log(message);
+console.warn(message);
+console.error(message);
+console.groupEnd();
 
-    /******* using the $.get() method without a callback *****/
+// console.table(c);
 
-    // let getObject = $.get("test.html").done(function (data) {
-    //     console.log("The data returned is in the done method: ", data);
-    //     $("#content").html(data);
-    // }).fail(function () {
-    //     console.log("Something went terribly wrong :(");
-    // }).always(function () {
-    //     console.log("this is always going to show up");
-    //     // this will alwys run
-    // });
-    // console.log("This is the jqxhr object: ", getObject);
-
-    /******* using the $.getJSON() method with a callback *****/
-
-    // let getJsonObject = $.getJSON("test.json", function (data) {
-    //     // jQuery.each
-    //     $.each(data.cities, function (key, val) {
-    //         console.log("data key: ", key, " and data value: ", val);
-
-    //         $('#content').append(`<div id="${val.name.toLowerCase()}" class="city">
-    //             <div class="name">${val.name}</div>
-    //             <div class="population">${val.population}</div>
-    //             <div class="citymap"><img src="${val.imageURL}"></div>
-    //         </div>`);
-    //     });
-    // });
-
-    // console.log("The getjson object: ", getJsonObject);
-
-    /******* using the $.getJSON() method without a callback *****/
-
-    let getJsonObject = $.getJSON("test.json").done(function (data) {
-        // jQuery.each
-        $.each(data.cities, function (key, val) {
-            console.log("data key: ", key, " and data value: ", val);
-
-            $('#content').append(`<div id="${val.name.toLowerCase()}" class="city">
-                <div class="name">${val.name}</div>
-                <div class="population">${val.population}</div>
-                <div class="citymap"><img src="${val.imageURL}"></div>
-            </div>`);
-        });
-    });
-
-    console.log("The getjson object: ", getJsonObject);
-
-    // init();
-});
-
-
-// function init() {
-//  DO NOT PUT YOUR READY FUNCTION INSIDE OF ANOTHER FUNCTION LIKE THIS
-//     $(function () {
-//         $.get();
-//     });
-// }
-// init();
+// console.log("the console error didn't halt the code");
