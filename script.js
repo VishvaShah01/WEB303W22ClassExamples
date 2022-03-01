@@ -88,7 +88,10 @@ console.log(temper.fahrenheit);
 temper.fahrenheit = 80;
 console.log(temper.celsius);
 
-console.log('celsius' in Temperature);
+// check if the property belongs to the instance of the Temperature
+console.log('celsius' in temper);
+// you can also use the new keyword before the class definition name
+console.log('celsius' in new Temperature);
 
 // the sixth object example
 
