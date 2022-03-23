@@ -2,9 +2,14 @@
 
 <head>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/accordion.css">
     <link rel="stylesheet" href="css/tabbed.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/photo-viewer.css">
+    <link rel="stylesheet" href="css/slider.css">
 
 </head>
 
@@ -117,13 +122,44 @@
 
     </div>
 
+    <!-- the content of the modal and the button to open it -->
+    <div id="share-options">
+        Unfortunately a russian chess player has been suspended from FIDE for 6 months
+    </div>
+    <button id="share">Open the modal</button>
 
+    <!-- <div class="modal">
+        <div class="modal-content">
+            Unfortunately a russian chess player has been suspended from FIDE for 6 months
+            <button class="modal-close">close</button>
+        </div>
+    </div> -->
+
+    
+    <div id="photo-frame"></div>
+    <div id="thumbnails">
+        <a href="img/photo-1.jpg" class="thumb active" title="Berry">
+            <img src="img/thumb-1.jpg" alt="Berry">
+        </a>
+        <a href="img/photo-2.jpg" class="thumb" title="Rose">
+            <img src="img/thumb-2.jpg" alt="Rose">
+        </a>
+        <a href="img/photo-3.jpg" class="thumb" title="Mint">
+            <img src="img/thumb-3.jpg" alt="Mint">
+        </a>
+    </div>
+    
+    
     <!-- <script type="text/javascript" src="jquery-3.6.0.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/accordion.js"></script>
     <script type="text/javascript" src="js/tabbed.js"></script>
+    <script type="text/javascript" src="js/modelWithClassObject.js"></script>
+    <script type="text/javascript" src="js/photo-viewer.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
+
+    <script type="text/javascript" src="js/script.js"></script>
 
 </body>
 

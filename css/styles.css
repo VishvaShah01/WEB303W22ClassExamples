@@ -1,18 +1,28 @@
-.citymap img{
-    width: 400px;
+body {
+  padding-bottom: 300px;
+  position: relative;
 }
-#prizes{
-
+.citymap img {
+  width: 400px;
 }
-#prizes h3{
-    border: 1px solid #000;
-    padding: 8px;
-    width: 500px;
-    margin: 0 auto;
+#prizes {
 }
-#prizes div{
-    border: 1px dashed #000;
-    padding: 8px;
-    width: 500px;
-    margin: 0 auto;
+#prizes h3 {
+  border: 1px solid #000;
+  padding: 8px;
+  width: 500px;
+  margin: 0 auto;
+}
+#prizes div {
+  border: 1px dashed #000;
+  padding: 8px;
+  width: 500px;
+  margin: 0 auto;
+}
+#share {
+  padding: 8px;
+  background-color: dodgerblue;
+  display: block;
+  width: auto;
+  margin: 20px auto;
 }
