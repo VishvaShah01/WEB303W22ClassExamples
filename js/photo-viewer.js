@@ -25,6 +25,7 @@ $(function () {
         e.preventDefault(); // Stop default link behavior
         $thumbs.removeClass('active'); // Remove active from thumbs
         $(this).addClass('active'); // Add active to clicked one
+        $frame.removeClass("default-text");
         if (cache.hasOwnProperty(src)) { // If cache contains this img
             if (cache[src].isLoading === false) { // and it's not loading
                 crossfade(cache[src].$img); // Call crossfade() function

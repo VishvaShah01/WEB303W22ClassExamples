@@ -26,3 +26,6 @@ body {
   width: auto;
   margin: 20px auto;
 }
+.special-accordion {
+  display: none;
+}

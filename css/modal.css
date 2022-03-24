@@ -7,7 +7,7 @@
   - right
 
   are based on the width and height of the content on the page */
-  /* position: absolute; */
+  position: absolute;
 
   /* position fixed, properties like
   
@@ -17,7 +17,7 @@
   - right
 
   are based on the width and height of the screen, what's visible to the user */
-  position: fixed;
+  /* position: fixed; */
   /* 
   left:
   top:

@@ -1,5 +1,6 @@
 $(function () {
 
+    $(".special-accordion").accordion(2000).show();
     //call the tabbed, or the accordion, or the modal
     (function (someParameter) {
         console.log(someParameter);
